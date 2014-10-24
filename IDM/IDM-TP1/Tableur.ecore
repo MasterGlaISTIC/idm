@@ -21,4 +21,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="contient" upperBound="-1"
         eType="#//Cell" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XtendEcoreHelper">
+    <eOperations name="flat"/>
+  </eClassifiers>
 </ecore:EPackage>
