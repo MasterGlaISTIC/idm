@@ -18,6 +18,7 @@
         eType="#//Expression"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tableur">
-    <eStructuralFeatures xsi:type="ecore:EReference" eType="#//Cell"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contient" upperBound="-1"
+        eType="#//Cell" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
