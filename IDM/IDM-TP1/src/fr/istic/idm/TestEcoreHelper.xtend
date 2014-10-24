@@ -10,7 +10,7 @@ class TestEcoreHelper {
 		val EPackage metaModel = loader.loadModel("Tableur.ecore")
 		val EcoreHelper helper = new EcoreHelper()
 		for(EClass class: metaModel.EClassifiers.filter(EClass)){
-			
+			helper.flat(class)
 		}
 			
 		
