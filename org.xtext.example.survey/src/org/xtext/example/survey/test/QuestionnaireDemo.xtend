@@ -1,6 +1,7 @@
 package org.xtext.example.survey.test
 
 import java.util.HashMap
+
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
@@ -28,19 +29,10 @@ class QuestionnaireDemo {
 	def test1() {
 		
 		// loading
-		var survey = loadServey(URI.createURI("/org.xtext.example.survey/src/org/xtext/example/survey/test/smaple.mydsl1")) 
+		var survey = loadServey(URI.createURI("src/org/xtext/example/survey/test/smaple.mydsl1")) 
 		Assert.assertNotNull(survey)
 		Assert.assertEquals(2, survey.polls.size)
-		//saveSurvey(URI.createURI("foo1.xmi"), survey)
 		
-//		// MODEL MANAGEMENT (ANALYSIS, TRANSFORMATION)
-//		pollS.polls.forEach[p | p.name = p.name + "_poll"]
-//
-//		// serializing
-//		savePollSystem(URI.createURI("foo2.q"), pollS) 
-		
-		 
-			
 	}
 	
 	

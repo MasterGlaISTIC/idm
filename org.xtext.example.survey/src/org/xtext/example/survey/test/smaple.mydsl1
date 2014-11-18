@@ -10,5 +10,11 @@ Poll{
 	}
 }
 Poll{
-	
+Question {
+		"Agree ?"
+		options
+		"Oui" //identifier
+		"Non"
+				
+	}	
 }
