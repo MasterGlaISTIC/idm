@@ -1,0 +1,24 @@
+grammar org.xtext.example.survey.Survey with org.eclipse.xtext.common.Terminals
+
+generate survey "http://www.xtext.org/example/survey/Survey"
+
+survey:
+	 (polls += Poll)*;
+	 
+Poll:
+	"Poll"  '{'
+	questions += Question+
+	'}'
+; 
+
+Question:
+	"Question" name = ID? '{'
+	STRING
+	"options" 
+	options+=option+
+	'}'
+;
+
+option:
+	(ID '=>')? (text = STRING)
+;

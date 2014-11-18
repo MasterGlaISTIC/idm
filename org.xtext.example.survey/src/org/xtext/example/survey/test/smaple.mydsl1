@@ -1,0 +1,14 @@
+Poll{
+	Question {
+		"Agree ?"
+		options
+		r1 => "Oui" //identifier
+		"Non"
+		"Ne se prononce pas"
+		r4 => "Oui et Non"
+		
+	}
+}
+Poll{
+	
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.example.survey/src-gen" editDirectory="/org.xtext.example.survey.edit/src"
+    editorDirectory="/org.xtext.example.survey.editor/src" modelPluginID="org.xtext.example.survey"
+    forceOverwrite="true" modelName="Survey" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.example.survey.edit"
+    editorPluginID="org.xtext.example.survey.editor" runtimeVersion="2.10">
+  <genPackages prefix="Survey" basePackage="org.xtext.example.survey" disposableProviderFactory="true"
+      fileExtensions="mydsl1" ecorePackage="Survey.ecore#/">
+    <genClasses ecoreClass="Survey.ecore#//survey">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Survey.ecore#//survey/polls"/>
+    </genClasses>
+    <genClasses ecoreClass="Survey.ecore#//Poll">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Survey.ecore#//Poll/questions"/>
+    </genClasses>
+    <genClasses ecoreClass="Survey.ecore#//Question">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Survey.ecore#//Question/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Survey.ecore#//Question/options"/>
+    </genClasses>
+    <genClasses ecoreClass="Survey.ecore#//option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Survey.ecore#//option/text"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
