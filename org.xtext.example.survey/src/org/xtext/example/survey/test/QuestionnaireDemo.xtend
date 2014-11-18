@@ -29,7 +29,7 @@ class QuestionnaireDemo {
 	def test1() {
 		
 		// loading
-		var survey = loadServey(URI.createURI("src/org/xtext/example/survey/test/smaple.mydsl1")) 
+		var survey = loadServey(URI.createURI("src/org/xtext/example/survey/test/sample.mydsl1")) 
 		Assert.assertNotNull(survey)
 		Assert.assertEquals(2, survey.polls.size)
 		
