@@ -1,0 +1,22 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+MyDsl:
+	 (polls += Poll)*;
+	 
+Poll:
+	"Poll"  '{'
+	questions += Question+
+	'}'
+; 
+
+Question:
+	"Question" ID 
+	types += Type+
+;
+
+enum Type:
+	 CHECKBOX | TEXTBOX
+	 	 ;
+
