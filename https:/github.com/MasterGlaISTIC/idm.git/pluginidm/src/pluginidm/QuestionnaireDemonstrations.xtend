@@ -1,8 +1,8 @@
 package pluginidm
 
 import java.util.HashMap
-import junit.framework.Assert
 import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.junit.Test
@@ -25,11 +25,31 @@ class QuestionnaireDemonstrations {
 	@Test
 	def test1() {
 
-		
+		println("Without aspects")
+		val loader = new EcoreLoader
+		val docHelper = new EcoreHelper()
+		val metamodel = loader.loadModel("projectIDM.ecore")
+		for (EClass aClass : metamodel.EClassifiers.filter(EClass)) {
+			docHelper.assignIdentifier(aClass)
+		}
+		println("--- Flat ---")
+		for (EClass aClass : metamodel.EClassifiers.filter(EClass)) {
+			println(docHelper.flat(aClass, ""));
+		}
+		println
+		println("--- Short ---")
+		for (EClass aClass : metamodel.EClassifiers.filter(EClass)) {
+			println(docHelper._short(aClass, ""));
+		}
+		println
+		println("--- Flat Short ---")
+		for (EClass aClass : metamodel.EClassifiers.filter(EClass)) {
+			println(docHelper.flatShort(aClass, ""));
+		}
+
 	}
 
-	
-//	def toPolls(List<Poll> polls) '''
+//def toPolls(List<Poll> polls) '''
 //<html>
 //<body>
 //«FOR p : polls»
